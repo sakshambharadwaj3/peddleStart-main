@@ -1,9 +1,3 @@
-
-# Task Management Application
-
-This project is a Task Management Application built using Flask, Flask-RESTful, and SQLAlchemy for the backend, and HTML, CSS, and JavaScript for the frontend.
-
-
 ## Getting Started
 
 ### Prerequisites
@@ -13,7 +7,7 @@ This project is a Task Management Application built using Flask, Flask-RESTful, 
 
 ### Setup
 
-To set up the project locally, follow these steps:
+To set up the project locally on Windows, follow these steps:
 
 1. Clone the repository:
 
@@ -22,16 +16,36 @@ To set up the project locally, follow these steps:
     cd task_management
     ```
 
-2. Run the setup script to create a virtual environment and install dependencies:
+2. Create a virtual environment:
 
     ```bash
-    ./local_setup.sh
+    python -m venv venv
     ```
 
-3. Run the application:
+3. Activate the virtual environment:
+
+    - For Command Prompt:
+
+      ```bash
+      venv\Scripts\activate
+      ```
+
+    - For PowerShell:
+
+      ```bash
+      .\venv\Scripts\Activate.ps1
+      ```
+
+4. Install the dependencies:
 
     ```bash
-    ./local_run.sh
+    pip install -r requirements.txt
+    ```
+
+5. Run the application:
+
+    ```bash
+    python main.py
     ```
 
 The application should now be running on `http://localhost:5000`.
@@ -107,33 +121,31 @@ The frontend is built using HTML, CSS (Bootstrap), and JavaScript (Axios for API
 
 ## Running the Application
 
-### local_setup.sh
+### Setup and Activation
 
-This script creates a virtual environment and installs the necessary dependencies.
+1. **Create a virtual environment**:
+   ```bash
+   python -m venv venv
+   ```
 
-### local_run.sh
+2. **Activate the virtual environment**:
+   - For Command Prompt:
+     ```bash
+     venv\Scripts\activate
+     ```
+   - For PowerShell:
+     ```bash
+     .\venv\Scripts\Activate.ps1
+     ```
 
-This script activates the virtual environment and starts the Flask application.
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### main.py
+4. **Run the application**:
+   ```bash
+   python main.py
+   ```
 
-This is the entry point of the application.
-
-
-### Explanation of Scripts
-
-1. **local_setup.sh**:
-   - Creates a virtual environment.
-   - Installs the required dependencies from `requirements.txt`.
-
-2. **local_run.sh**:
-   - Activates the virtual environment.
-   - Runs the Flask application.
-
-Make sure the scripts have execute permissions:
-```bash
-chmod +x local_setup.sh
-chmod +x local_run.sh
-```
-
-This README file provides a comprehensive overview of the project, including setup instructions, API endpoints, and scripts for running the application.
+With these instructions, you can set up and run the Task Management Application on a Windows environment manually, without the need for batch scripts.
